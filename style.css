@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url("couple.jpg") center;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+}
+
+nav {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.322);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1.5rem;
+}
+
+a > img {
+  width: 8.5rem;
+  height: 16vh;
+  border-radius: 1.5rem;
+  border: 2px solid white;
+}
+
+a > img:hover {
+  border: 2px solid black;
+  border-radius: 2rem;
+  scale: 1.1;
+}
+
+a > img:active {
+  scale: 0.9;
+}
+
+.inp {
+  margin-top: 2rem;
+}
+
+input {
+  padding: 0.3rem 1rem;
+  border: 2px solid black;
+  border-radius: 1rem 0rem 0rem 1rem;
+}
+
+ul {
+  display: flex;
+  margin-top: 2rem;
+  gap: 1.5rem;
+}
+
+li::marker {
+  content: "";
+}
+
+input::placeholder {
+  color: black;
+}
+
+ul > a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  font-size: 1.3rem;
+}
+
+li:hover {
+  cursor: pointer;
+  scale: 1.1;
+  text-decoration: underline;
+}
+
+input:focus {
+  border: 2px solid blue;
+}
+
+input:active {
+  border: 2px solid blue;
+}
+
+.container {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  gap: 1rem;
+  padding: 0.8rem 1.5rem;
+}
+
+.movie_container,
+.video_call_area {
+  width: 50%;
+}
+
+.block {
+  border-bottom: 2px solid white;
+}
+
+marquee {
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 0rem;
+}
+
+i {
+  scale: 1.2;
+  cursor: pointer;
+  padding: 0.4rem 0.7rem;
+}
+
+#hidden {
+  color: white;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.664);
+  backdrop-filter: blur(5px);
+  padding: 0.7rem 1.2rem;
+  border-radius: 2rem;
+  position: absolute;
+  width: 30%;
+  top: 110%;
+  right: 1%;
+  display: none;
+}
+
+.movie > video {
+  border-radius: 1.5rem;
+  margin-top: 0.5rem;
+  height: 66vh;
+  border: 2px solid white;
+  width: 100%;
+}
+
+.go_in {
+  animation: left 1s 1;
+}
+.first {
+  width: 100%;
+  border: 2px solid white;
+  height: 50%;
+  border-radius: 1.5rem;
+}
+.second {
+  width: 100%;
+  border: 2px solid white;
+  height: 45%;
+  border-radius: 1.5rem;
+  margin-top: 1rem;
+}
+@keyframes left {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  ul {
+    display: block;
+    scale: 0.8;
+    margin-top: 1rem;
+  }
+
+  a > img {
+    width: 5rem;
+    height: 10vh;
+  }
+
+  .container {
+    display: block;
+  }
+  .first {
+    width: 100%;
+    border: 2px solid white;
+    height: 40vh;
+    border-radius: 1.5rem;
+  }
+  .second {
+    width: 100%;
+    border: 2px solid white;
+    height: 40vh;
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+  }
+  #hidden {
+    width: 300%;
+  }
+  .movie > video {
+    border-radius: 1.5rem;
+    margin-top: 0.5rem;
+    height: 75vh;
+    border: 2px solid white;
+    width: 100%;
+  }
+
+  .movie_container,
+  .video_call_area {
+    width: 100%;
+  }
+
+  input {
+    width: 60%;
+  }
+
+  .inp {
+    margin-top: 1.2rem;
+    margin-left: 0.5rem;
+  }
+
+  nav {
+    height: 15vh;
+  }
+  li {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 361px) {
+  ul {
+    display: block;
+    scale: 0.8;
+    margin-top: 1rem;
+  }
+
+  .movie > video {
+    border-radius: 1.5rem;
+    margin-top: 0.5rem;
+    height: 75vh;
+    border: 2px solid white;
+    width: 100%;
+  }
+  .first {
+    width: 100%;
+    border: 2px solid white;
+    height: 45%;
+    border-radius: 1.5rem;
+  }
+  #hidden {
+    width: 400%;
+  }
+  .second {
+    width: 100%;
+    border: 2px solid white;
+    height: 45%;
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+  }
+  a > img {
+    width: 5rem;
+    height: 10vh;
+  }
+
+  .movie_container,
+  .video_call_area {
+    width: 100%;
+  }
+
+  input {
+    width: 60%;
+    padding: 0.2rem 0.4rem;
+  }
+  i {
+    padding: 0.3rem 0.4rem;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .inp {
+    margin-top: 1.2rem;
+    margin-left: 0.5rem;
+  }
+
+  nav {
+    height: 15vh;
+  }
+}
